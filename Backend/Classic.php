@@ -35,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['shirt'])) {
     <div class="navbar">
     <a href="Index.html">Home</a>
     <a href="Classic.php">Shop</a>
-    <a href="About.html">About</a>
-    <a href="About.html">Contact</a>
+    <a href="../Frontend/About.html">About</a>
+    <a href="../Frontend/About.html">Contact</a>
     <a href="cart.php">View Cart</a>
     </div>
 
@@ -53,42 +53,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['shirt'])) {
     </div>
     <div class="grid-container">
             <div class="grid-item">
-            <a href="#"><img src="Shirt1.png" alt="Shirt 1"></a>
+            <a href="#"><img src="../Shirt_designs/Shirt1.png" alt="Shirt 1"></a>
             <form method="POST">
                 <input type="hidden" name="shirt" value="Classic Shirt 1">
                 <button type="submit" class="cart-button">Add to Cart</button>
             </form>
         </div>
         <div class="grid-item">
-            <a href="#"><img src="Shirt2.png" alt="Shirt 2"></a>
+            <a href="#"><img src="../Shirt_designs/Shirt2.png" alt="Shirt 2"></a>
             <form method="POST">
                 <input type="hidden" name="shirt" value="Classic Shirt 2">
                 <button type="submit" class="cart-button">Add to Cart</button>
             </form>
         </div>
         <div class="grid-item">
-            <a href="#"><img src="Shirt3.png" alt="Shirt 2"></a>
+            <a href="#"><img src="../Shirt_designs/Shirt3.png" alt="Shirt 2"></a>
             <form method="POST">
                 <input type="hidden" name="shirt" value="Classic Shirt 3">
                 <button type="submit" class="cart-button">Add to Cart</button>
             </form>
         </div>
         <div class="grid-item">
-            <a href="#"><img src="Shirt4.png" alt="Shirt 2"></a>
+            <a href="#"><img src="../Shirt_designs/Shirt4.png" alt="Shirt 2"></a>
             <form method="POST">
                 <input type="hidden" name="shirt" value="Classic Shirt 4">
                 <button type="submit" class="cart-button">Add to Cart</button>
             </form>
         </div>
         <div class="grid-item">
-            <a href="#"><img src="Shirt5.png" alt="Shirt 2"></a>
+            <a href="#"><img src="../Shirt_designs/Shirt5.png" alt="Shirt 2"></a>
             <form method="POST">
                 <input type="hidden" name="shirt" value="Classic Shirt 5">
                 <button type="submit" class="cart-button">Add to Cart</button>
             </form>
         </div>
         <div class="grid-item">
-            <a href="#"><img src="Shirt6.png" alt="Shirt 2"></a>
+            <a href="#"><img src="../Shirt_designs/Shirt6.png" alt="Shirt 2"></a>
             <form method="POST">
                 <input type="hidden" name="shirt" value="Classic Shirt 6">
                 <button type="submit" class="cart-button">Add to Cart</button>

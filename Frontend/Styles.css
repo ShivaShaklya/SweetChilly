@@ -1,0 +1,134 @@
+body{
+    background-color: white;
+}
+h1{
+    text-align:center;
+    font-size: 45px;
+}
+#sweet{
+    color:#f988cc;
+}
+#chilly{
+    color:red;
+}
+#heading{
+    text-align:center;
+    font-size:20px;
+}
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.5px 6px;
+    text-decoration: none;
+    font-size: 17px;
+    margin:auto;
+}
+.navbar a:hover {
+    background-color: #f988cc;
+    color:#faf7f9;
+}
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.design-button {
+    background-color: #f04e30;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.design-button:hover {
+    background-color: #c43d27;
+}
+
+.active-button{
+    background-color: #db2793;
+    border: 2px solid rgb(101, 219, 248);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+.cart-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.cart-button:hover {
+    background-color: #333;
+}
+form{
+    line-height:2;
+}
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+pre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}

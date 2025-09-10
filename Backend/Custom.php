@@ -22,6 +22,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['shirt'])) {
 
     echo "<script>alert('$shirt added to cart!');</script>";
 }
+
+if (isset($_POST['design_name'])) {
+    $designName = $_POST['design_name'];
+    $customOrderDetails = [
+        'name' => $_POST['name'],
+        'email' => $_POST['email'],
+        'custom_text' => $_POST['custom_text'],
+        'emoji' => $_POST['emoji'],
+        'description' => $_POST['description']
+    ];
+
+    $_SESSION['cart'][$designName] = $customOrderDetails;
+
+    echo "<script>showToast('Your custom order has been accepted!');</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['shirt'])) {
 </head>
 <body>
     <div class="navbar">
-        <a href="Index.html">Home</a>
+        <a href="../Frontend/Index.html">Home</a>
         <a href="Classic.php">Shop</a>
-        <a href="About.html">About</a>
-        <a href="About.html">Contact</a>
+        <a href="../Frontend/About.html">About</a>
+        <a href="../Frontend/About.html">Contact</a>
         <a href="cart.php">View Cart</a>
     </div>
 
@@ -51,32 +66,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['shirt'])) {
         <button class="design-button <?php echo isActive('Minimalist', $selectedType); ?>" onclick="tshirt_type('Minimalist', event)">Minimalist Design</button>
         <button class="design-button <?php echo isActive('Custom', $selectedType); ?>" onclick="tshirt_type('Custom', event)">Custom Text</button>
     </div>
-    <div class="grid-container">
-            <div class="grid-item">
-            <a href="#"><img src="ShirtM1.png" alt="Shirt 1"></a>
-            <form method="POST">
-                <input type="hidden" name="shirt" value="Minimalist Shirt 1">
-                <button type="submit" class="cart-button">Add to Cart</button>
-            </form>
-        </div>
-        <div class="grid-item">
-            <a href="#"><img src="ShirtM2.png" alt="Shirt 2"></a>
-            <form method="POST">
-                <input type="hidden" name="shirt" value="Minimalist Shirt 2">
-                <button type="submit" class="cart-button">Add to Cart</button>
-            </form>
-        </div>
-        <div class="grid-item">
-            <a href="#"><img src="ShirtM3.png" alt="Shirt 2"></a>
-            <form method="POST">
-                <input type="hidden" name="shirt" value="Minimalist Shirt 3">
-                <button type="submit" class="cart-button">Add to Cart</button>
-            </form>
-        </div>
-    </div>
+    <form action="" method="post">
+        Customer Name: <input type="text" name="name" placeholder="John Doe" required><br>
+        Email: <input type="email" name="email" placeholder="johndoe@gmail.com" required><br>
+        Custom Text: <input type="text" name="custom_text" placeholder="Space Rangers" required><br>
+        Symbol: <input type="text" name="emoji" placeholder="😊👍🔥" required><br>
+        Description: <textarea name="description" required>Add detailed description here...</textarea><br>
+        Design Name: <input type="text" name="design_name" placeholder="RockStar Chic" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="toast" class="toast">Your custom order has been accepted!</div>
     <script>
         function tshirt_type(type, event) {
             window.location.href = type + ".php?selected=" + type;
+        }
+        
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.className = "toast show";
+            setTimeout(() => {
+                toast.className = toast.className.replace("show", "");
+            }, 3000);
         }
     </script>
 </body>

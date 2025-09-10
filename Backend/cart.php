@@ -40,10 +40,10 @@ $cart = $_SESSION['cart'] ?? [];
 </head>
 <body>
     <div class="navbar">
-        <a href="Index.html">Home</a>
+        <a href="../Frontend/Index.html">Home</a>
         <a href="Classic.php">Shop</a>
-        <a href="About.html">About</a>
-        <a href="About.html">Contact</a>
+        <a href="../Frontend/About.html">About</a>
+        <a href="../Frontend/About.html">Contact</a>
         <a href="cart.php">View Cart</a>
     </div>
     <h1 style="text-align:center;">Your Shopping Cart</h1>
